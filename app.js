@@ -37,7 +37,7 @@ function bind(b,n){back?.addEventListener("click",b);nextBtn?.addEventListener("
 function companion(text){return `<div class="companion-strip"><div class="companion-face">${c().icon}</div><div class="companion-text"><strong>${c().name}:</strong> ${text}</div></div>`}
 function render(){({intro,register,choose,camp,map,mission,finish,journal}[flow.page]||intro)()}
 function intro(){
- shell(`<h1 class="title">Misión<br>Colosos</h1><p class="subtitle">Explorá. Descubrí. Protegé.</p><div class="hero"><img src="assets/coti.png" alt="Coti"><div class="quest-tag">NUEVA AVENTURA</div></div><div class="dialogue"><strong>Coti:</strong> Hay Colosos esperando ser encontrados. ¿Venís?</div>`,footer("Borrar partida","¡Acepto la misión!","gold"));
+ shell(`<h1 class="title">Misión<br>Colosos</h1><p class="subtitle">Explorá. Descubrí. Protegé.</p><div class="hero"><img src="coti.png" alt="Coti"><div class="quest-tag">NUEVA AVENTURA</div></div><div class="dialogue"><strong>Coti:</strong> Hay Colosos esperando ser encontrados. ¿Venís?</div>`,footer("Borrar partida","¡Acepto la misión!","gold"));
  bind(reset,()=>{flow.page=save.ready?"camp":"register";render()});
 }
 function reset(){if(confirm("¿Borrar tu partida?")){localStorage.removeItem("mc_vertical");location.reload()}}
